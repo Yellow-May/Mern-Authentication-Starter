@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
-import { Outlet, Navigate, useLocation } from 'react-router';
+import { Outlet, Navigate, useLocation } from 'react-router-dom';
 import { getUser } from 'redux/features/Auth';
 import { UserRole } from 'redux/features/Auth/types';
 
