@@ -2,7 +2,7 @@
 
 ## Designed with
 
-- React with Typescript Frontend
+- React with Typescript and React Router v6 Frontend
 - Nodejs Backend with MongoDB
 
 ## Frontend
@@ -23,3 +23,27 @@ The refresh token is saved to a DB along with the user info and a unique browser
 When access token expires, send a request to the refresh API and retreive a new access token.
 Access tokens are short lived, while refresh tokens are less.
 Brower Ids are long lived and hold no valuable information.
+
+## Environment variables
+
+### Client side
+
+REACT_APP_BACKEND_URL = local backend url
+Examples
+
+- dev : 'http://localhost:5000/api' or 'http://localhost:5000'
+- prod : '/api' or '/'
+
+REACT_APP_PERSIST = a random string name to store your PERSIST boolean in local storage
+Example : ewhou838u489u508
+
+### Server side
+
+NODE_ENV = 'development' or 'dev' **not required in production**
+MONGO_URI = mongo db uri
+PORT = port number **not required in production**
+
+JWT_ACCESS_SECRET = random long string preferrable use crypto to generate one
+JWT_REFRESH_SECRET = same as above
+REFRESH_COOKIE_NAME = random string just like REACT_APP_PERSIST
+BROWSER_COOKIE_NAME = same as above
